@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 66;
 const useFetch = (endpoint, query) => {
-  console.log(endpoint);
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -21,13 +20,11 @@ const useFetch = (endpoint, query) => {
     setIsLoading(true);
 
     try {
-      console.log(options);
       const response = await axios.request(options);
 
       setData(response.data.data);
       setIsLoading(false);
     } catch (error) {
-      console.log(error);
       setError(error);
       alert("There is an error");
     } finally {
