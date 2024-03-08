@@ -37,7 +37,6 @@ const Nearbyjobs = () => {
           ))
         )}
       </View>
-      <Text>Nearby Jobs</Text>
     </View>
   );
 };
